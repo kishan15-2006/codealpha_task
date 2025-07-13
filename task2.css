@@ -1,0 +1,96 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: radial-gradient(circle at top left, #141e30, #0f2027);
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .calculator {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 25px;
+    width: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #display {
+    width: 100%;
+    height: 65px;
+    font-size: 30px;
+    text-align: right;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #00fff7;
+    font-weight: 600;
+    margin-bottom: 25px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+    outline: none;
+  }
+  
+  /* Corrected Grid: All buttons now align consistently */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+  
+  .btn {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #1e2b3a, #1a2633);
+    color: #e0e0e0;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #2d3e50;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00fff7;
+    color: #00fff7;
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3) inset;
+  }
+  
+  /* Only special style for "=" and "0" */
+  .equal {
+    grid-column: span 1;
+    background-color: #00c9a7;
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 201, 167, 0.5);
+  }
+  
+  .equal:hover {
+    background-color: #00a98f;
+    box-shadow: 0 0 12px #00fff7;
+  }
+  
+  .zero {
+    grid-column: span 2;
+  }
